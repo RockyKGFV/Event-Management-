@@ -13,7 +13,7 @@ const EventCard = ({ event }) => {
             <p><strong>Category:</strong> {category}</p>
             <p><strong>Capacity:</strong> {capacity}</p>
             <p><strong>Registration Deadline:</strong> {new Date(registrationDeadline).toLocaleDateString()}</p>
-            {/* Add more event details as needed */}
+            
         </div>
     );
 };
