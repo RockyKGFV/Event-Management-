@@ -24,7 +24,7 @@ const Profile = () => {
         <div>
             <h2>Profile</h2>
             <p><strong>Email:</strong> {user.email}</p>
-            {/* Add more user profile details as needed */}
+            
         </div>
     );
 };
