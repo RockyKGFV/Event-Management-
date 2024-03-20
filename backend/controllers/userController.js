@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 exports.getUserProfile = async (req, res) => {
     try {
-        const userId = req.user.id; // Assuming you have middleware to extract user ID from JWT
+        const userId = req.user.id; 
         const user = await User.findById(userId).select('-password'); // Exclude password from the response
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
@@ -16,7 +16,7 @@ exports.getUserProfile = async (req, res) => {
 
 exports.updateUserProfile = async (req, res) => {
     try {
-        const userId = req.user.id; // Assuming you have middleware to extract user ID from JWT
+        const userId = req.user.id; 
         const userData = req.body;
         const updatedUser = await User.findByIdAndUpdate(userId, userData, { new: true });
         if (!updatedUser) {
@@ -31,7 +31,7 @@ exports.updateUserProfile = async (req, res) => {
 
 exports.deleteUser = async (req, res) => {
     try {
-        const userId = req.user.id; // Assuming you have middleware to extract user ID from JWT
+        const userId = req.user.id; 
         const deletedUser = await User.findByIdAndDelete(userId);
         if (!deletedUser) {
             return res.status(404).json({ message: 'User not found' });
